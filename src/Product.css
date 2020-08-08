@@ -10,6 +10,7 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    border-radius: 5px;
 }
 
 .product_info {
@@ -36,4 +37,5 @@
     background-color: #f0c14b;
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 3px;
 }
