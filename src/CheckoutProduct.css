@@ -1,7 +1,7 @@
 .checkoutProduct {
     display: flex;
     background-color: white;
-    margin: 20px;
+    margin: 20px 0px;
     padding: 20px;
     border-radius: 5px;
 }
