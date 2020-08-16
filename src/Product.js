@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider';
 import CurrencyFormat from 'react-currency-format';
 
 function Product({ id, title, price, rating, image }) {
-    const [{ cart }, dispatch] = useStateValue();
+    const [ dispatch] = useStateValue();
 
     const addToCart = () => {
         dispatch({

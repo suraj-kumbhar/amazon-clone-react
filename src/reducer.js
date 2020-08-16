@@ -11,7 +11,7 @@ function reducer(state, action) {
     switch (action.type) {
         case 'ADD_TO_CART':
             // logic for adding item to cart
-            return { ...state, cart: [...state.cart, action.item] };
+            return { ...state, user:action.user };
         case 'REMOVE_FROM_CART':
             let newCart = [...state.cart];
 
@@ -26,6 +26,8 @@ function reducer(state, action) {
                 );
             }
             return { ...state, cart: newCart };
+            case 'SET_USER':
+                return state;
         default:
             return state;
     }

@@ -1,14 +1,15 @@
 import React from 'react';
 import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
+import CurrencyFormat from 'react-currency-format';
 
 function CheckoutProduct({ id, title, image, price, rating }) {
-    const [{ cart }, dispatch] = useStateValue();
+    const [ dispatch] = useStateValue();
 
     const removeFromCart = () => {
         dispatch({
             type: 'REMOVE_FROM_CART',
-            id: id,
+            id,
         });
     };
 
@@ -18,8 +19,18 @@ function CheckoutProduct({ id, title, image, price, rating }) {
             <div className="checkoutProduct__info">
                 <p className="checkoutProduct__title">{title}</p>
                 <p className="checkoutProduct__price">
-                    <small>₹</small>
-                    <strong> {price}</strong>
+                    <CurrencyFormat
+                        renderText={(value) => (
+                            <>
+                                <strong>{value}</strong>
+                            </>
+                        )}
+                        decimalScale={2}
+                        value={price}
+                        displayType={'text'}
+                        thousandSeparator={true}
+                        prefix={'₹'}
+                    />
                 </p>
                 <div className="checkoutProduct__rating">
                     {Array(rating)
