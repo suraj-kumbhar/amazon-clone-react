@@ -4,12 +4,12 @@ import { useStateValue } from './StateProvider';
 import CurrencyFormat from 'react-currency-format';
 
 function CheckoutProduct({ id, title, image, price, rating }) {
-    const [ dispatch] = useStateValue();
+    const [ {cart},dispatch] = useStateValue();
 
     const removeFromCart = () => {
         dispatch({
             type: 'REMOVE_FROM_CART',
-            id,
+            id: id,
         });
     };
 

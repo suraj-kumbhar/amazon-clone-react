@@ -3,9 +3,10 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import {auth} from './Firebase';
 
 import { useStateValue } from './StateProvider';
-import { auth } from 'firebase';
+// import { auth } from 'firebase';
 
 function Header() {
     const [{ cart,user }] = useStateValue();
@@ -34,11 +35,11 @@ function Header() {
 
             <div className="header__nav">
                 <Link to={!user && "/login"} className="header__link">
-                    <div onclick = {login} className="header__option">
+                    <div onClick = {login} className="header__option">
                         <span className="header__optionLineOne">
                             Hello {user?.email}
                         </span>
-                        <span className="header__optionLineTwo">{!user?'Sign Out':"Sign In"}</span>
+                        <span className="header__optionLineTwo">{user?'Sign Out':"Sign In"}</span>
                     </div>
                 </Link>
 

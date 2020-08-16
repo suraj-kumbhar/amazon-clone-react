@@ -4,12 +4,12 @@ import { useStateValue } from './StateProvider';
 import CurrencyFormat from 'react-currency-format';
 
 function Product({ id, title, price, rating, image }) {
-    const [ dispatch] = useStateValue();
+    const [ {user},dispatch] = useStateValue();
 
     const addToCart = () => {
         dispatch({
             type: 'ADD_TO_CART',
-            item: {
+            payload: {
                 id,
                 title,
                 image,
@@ -47,7 +47,7 @@ function Product({ id, title, price, rating, image }) {
             </div>
 
             <img src={image} alt="" />
-            <button onClick={addToCart}>Add to Cart</button>
+            {user && <button onClick={addToCart}>Add to Cart</button>}
         </div>
     );
 }
