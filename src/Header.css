@@ -1,73 +1,83 @@
 .header {
-    background-color: #131921;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header__logo {
-    width: 100px;
-    margin: 0px 20px;
-    margin-top: 18px;
-    object-fit: contain;
+  width: 100px;
+  margin: 0px 20px;
+  margin-top: 18px;
+  object-fit: contain;
+}
+
+.header__logo:hover {
+  transform: scale(1.025);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .header__optionBasket {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.header__optionBasket:hover {
+  transform: scale(1.025);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .header__basketCount {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .header__nav {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .header__option {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .header__optionLineOne {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .header__optionLineTwo {
-    font-size: 13px;
-    font-weight: 800;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .header__link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .header__search {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .header__searchInput {
-    height: 12px;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .header__searchIcon {
-    padding: 5px;
-    height: 22px !important;
-    background-color: #cd9042;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
