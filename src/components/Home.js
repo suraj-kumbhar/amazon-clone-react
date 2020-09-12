@@ -19,6 +19,7 @@ function Home() {
       <div className="home__slideshow">
         <Slide {...properties}>
           {slideImages.map((each, index) => (
+            // eslint-disable-next-line jsx-a11y/alt-text
             <img src={each} key={index} className="home__slideshowImage" />
           ))}
         </Slide>

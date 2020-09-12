@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './Header';
-import Home from './Home';
-import Checkout from './Checkout';
-import Login from './Login';
+import Header from './components/Header';
+import Home from './components/Home';
+import Checkout from './components/Checkout';
+import Login from './components/Login';
 import { useStateValue } from './StateProvider';
 import { auth } from './Firebase';
+import NavBar from './components/NavBar';
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -32,6 +33,7 @@ function App() {
   }, [dispatch]);
 
   // console.log(user);
+
   console.log('User is >>>>', user);
 
   return (
@@ -47,6 +49,7 @@ function App() {
           </Route>
           <Route path="/">
             <Header />
+            <NavBar />
             <Home />
           </Route>
         </Switch>
